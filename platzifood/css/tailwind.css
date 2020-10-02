@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* las directivas de tailwind son formas de agregar los elementos al erchivo final de css que se esté manejando */
+
+/* Tailwind BASE crea todos los elementos de html por defecto */
+
+/* Tailwind UTILITIES crea todo el contenido de utilidades  */
