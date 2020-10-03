@@ -18,3 +18,8 @@ module.exports = {
   variants: {},
   plugins: [],
 }
+/*Columna vertebral de Tailwind:
+1) Responsive Desing
+2) Mobile First
+3)Utility First
+*/
