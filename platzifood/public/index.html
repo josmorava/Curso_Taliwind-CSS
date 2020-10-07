@@ -9,9 +9,19 @@
 
     <!-- ---- TITLLE---- -->
     <title>Inicio</title>
+
+    <!-- comando para crear el archivo con las propiedades de tailwind: npx tailwindcss init tailwind.config.full.js --full
+    -->
 </head>
-<body>
-    <h1 class="bg-yellow-500 text-red-700">Hello world</h1>
-    <input class="border-2 border-blue-300 placeholder-gray-800" type="text" placeholder="Lorem Ipsu">
+<body class="mx-4">
+    <!-- Para la altura se ultiza una 'h' -->
+    <!-- Para el ancho del los contenedores se utiliza 'w' -->
+    <!-- Para el pading se utiliza la letra 'p' -->
+    <!-- MY para el margen entre el eje de las y, lo mismo para el eje de las x -->
+    <h1 class="h-32 w-32 my-8 mx-auto bg-yellow-500 text-red-700">Hello world</h1>
+    
+    <div>
+        <input class="py-1 px-4 object-center border-2 border-blue-300 placeholder-gray-800" type="text" placeholder="Lorem Ipsu">
+    </div>
 </body>
 </html>
