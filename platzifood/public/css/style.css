@@ -21680,6 +21680,16 @@ video {
 
 /* Tailwind UTILITIES crea todo el contenido de utilidades  */
 
+/*Directivas apply*/
+
+h1 {
+  font-size: 1.875rem;
+  --text-opacity: 1;
+  color: #2f855a;
+  color: rgba(47, 133, 90, var(--text-opacity));
+  font-weight: 600;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

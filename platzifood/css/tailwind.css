@@ -8,3 +8,9 @@
 /* Tailwind BASE crea todos los elementos de html por defecto */
 
 /* Tailwind UTILITIES crea todo el contenido de utilidades  */
+
+
+/*Directivas apply*/
+h1 {
+    @apply text-3xl text-green-700 font-semibold;
+}
