@@ -7,16 +7,48 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- title -->
-    <title>home</title>
+    <title>Proyecto burger-shop</title>
+    <!-- scrip -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
-<!-- header -->
 <body>
+<!-- nav bar -->
+<nav x-data="{open:false}" class="fixed z-10 w-full bg-secondary text-gray-200" >
     <div class="bg-secondary text-white flex justify-between items-center px-2">
         <div>
             <img class="h-8 py-1" src="images/logo-w.svg" alt="">
         </div>
-        <div class="text-2xl">&equiv;</div>
+        <div class="text-2xl" @click="open = true" >&equiv;</div>
     </div>
+
+    <div x-show="open" @click.away="open = false">
+        <div class="my-1 mx-2">
+            <input class="form-control" placeholder="Búsqueda" type="search" name="" id="">
+        </div>
+        <div class="py-1 mx-2 md:flex justify-around">
+            <div class="flex ">
+                Precio:
+                <div class="ml-2">$</div>
+                <div class="ml-2 text-primary">$$</div>
+                <div class="ml-2">$$$</div>
+                <div class="ml-2">$$$$</div>
+            </div>
+            <div class="flex">
+                <div >
+                    Calificación
+                </div>
+                <div class="ml-2 text-primary">&star;</div>
+                <div class="ml-px text-primary">&star;</div>
+                <div class="ml-px text-primary">&star;</div>
+                <div class="ml-px text-primary">&star;</div>
+                <div class="ml-px">&star;</div>
+            </div>
+            <div>
+                <button class="btn btn-primary">Filtrar</button>
+            </div>
+        </div> 
+    </div>
+</nav>
 
 <!-- banner -->
     <main  class=" mb-8">
@@ -51,21 +83,21 @@
     </main>
 
     <!-- form -->
-    <div class="mx-2">
+    <div class="container mx-auto mt-4">
         <div>
             <div>Nombre</div>
-            <input class=" w-full bg-gray-300 hover:bg-white border border-blue-300 py-1 rounded text-gray-800 px-4 placeholder-secondary leading-snug focus:shadow-outline focus:outline-none" type="text" placeholder="Nombre">
+            <input class=" form-control placeholder-secondary " type="text" placeholder="Nombre">
         </div> <!-- el leading controla el espacio entre lineas -->
         <div>
             <div>Email</div>
-            <input class=" w-full  hover:bg-white bg-gray-300 border border-blue-300 py-1 rounded text-gray-800 px-4 placeholder-secondary leading-snug focus:shadow-outline focus:outline-none" type="email" placeholder="Email">
+            <input class=" form-control placeholder-secondary " type="email" placeholder="Email">
         </div>
         <div>
             <div>Comentarios</div>
-            <textarea class=" w-full  hover:bg-white bg-gray-300 border border-blue-300 py-1 rounded text-gray-800 px-4 placeholder-secondary leading-snug focus:shadow-outline focus:outline-none" name="" id="" cols="30" rows="10"></textarea>
+            <textarea class=" form-control placeholder-secondary" name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div>
-            <button class=" px-4 py-1 rounded shadow-xl bg-gray-500 mx-auto block hover:shadow-none hover:bg-gary-700 hover:text-white">Enviar</button>
+            <button class="btn mx-auto btn-primary">Enviar</button>
         </div>
     </div>
 

@@ -1,6 +1,25 @@
 /* Forma de agregar los archivos base de tailwind a nuestro proyecto  */
 @tailwind base;
 @tailwind components;
+
+.form-control {
+    @apply w-full border border-blue-300 py-1 rounded text-gray-800 bg-gray-300 px-4 leading-snug ;
+}
+.form-control:hover{
+    @apply bg-white;
+}
+.form-control:focus{
+    @apply shadow-outline outline-none ;
+}
+.btn{
+    @apply rounded shadow-xl px-4 py-1 bg-gray-500  block;
+}
+.btn-primary{
+    @apply bg-yellow-600; 
+}
+.btn:hover{
+    @apply shadow-none bg-gray-700 text-white;
+}
 @tailwind utilities;
 
 /* las directivas de tailwind son formas de agregar los elementos al erchivo final de css que se esté manejando */
@@ -11,6 +30,6 @@
 
 
 /*Directivas apply*/
-h1 {
+/*h1 {
     @apply text-3xl text-green-700 font-semibold;
-}
+}*/
